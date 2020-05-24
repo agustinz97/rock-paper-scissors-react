@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.abbf07cf.chunk.css",
+    "main.js": "/react-gh-pages/static/js/main.d367d283.chunk.js",
+    "main.js.map": "/react-gh-pages/static/js/main.d367d283.chunk.js.map",
+    "runtime-main.js": "/react-gh-pages/static/js/runtime-main.1a4e0c80.js",
+    "runtime-main.js.map": "/react-gh-pages/static/js/runtime-main.1a4e0c80.js.map",
+    "static/js/2.f71b9075.chunk.js": "/react-gh-pages/static/js/2.f71b9075.chunk.js",
+    "static/js/2.f71b9075.chunk.js.map": "/react-gh-pages/static/js/2.f71b9075.chunk.js.map",
+    "index.html": "/react-gh-pages/index.html",
+    "precache-manifest.debd82e7455b8ddd8b3b6ed579966327.js": "/react-gh-pages/precache-manifest.debd82e7455b8ddd8b3b6ed579966327.js",
+    "service-worker.js": "/react-gh-pages/service-worker.js",
+    "static/css/main.abbf07cf.chunk.css.map": "/react-gh-pages/static/css/main.abbf07cf.chunk.css.map",
+    "static/js/2.f71b9075.chunk.js.LICENSE.txt": "/react-gh-pages/static/js/2.f71b9075.chunk.js.LICENSE.txt",
+    "static/media/bg-triangle.svg": "/react-gh-pages/static/media/bg-triangle.1fd44bdf.svg",
+    "static/media/icon-close.svg": "/react-gh-pages/static/media/icon-close.919ab92a.svg",
+    "static/media/icon-paper.svg": "/react-gh-pages/static/media/icon-paper.69a8c2e9.svg",
+    "static/media/icon-rock.svg": "/react-gh-pages/static/media/icon-rock.8ce1e109.svg",
+    "static/media/icon-scissors.svg": "/react-gh-pages/static/media/icon-scissors.bec2f9b3.svg",
+    "static/media/image-rules.svg": "/react-gh-pages/static/media/image-rules.5d74d25d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1a4e0c80.js",
+    "static/js/2.f71b9075.chunk.js",
+    "static/css/main.abbf07cf.chunk.css",
+    "static/js/main.d367d283.chunk.js"
+  ]
+}
