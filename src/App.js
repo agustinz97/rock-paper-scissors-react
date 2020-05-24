@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import React, { useState, createContext } from 'react'
 import styled from 'styled-components'
 import './App.css'
 
-import tableBg from './images/bg-triangle.svg'
-
 import { Header } from './components/Header'
 import { Button } from './components/Button'
-import { Token } from './components/Token'
 import { Rules } from './components/Rules'
+
+import { Table } from './components/Table'
 
 const AppStyled = styled.main`
     min-height: 100vh;
@@ -15,7 +14,7 @@ const AppStyled = styled.main`
 
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 
     background-image: radial-gradient(
         circle at top,
@@ -23,34 +22,30 @@ const AppStyled = styled.main`
         var(--darkBlue) 100%
     );
 
-    .table {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-
-        background: url(${tableBg}) center no-repeat;
-        background-size: 70%;
+    button {
+        margin-top: auto;
     }
 `
+export const ScoreContext = createContext()
 
 function App() {
-    const [rulesVisible, setRulesVisible] = useState(true)
-
+    //states
+    const [rulesVisible, setRulesVisible] = useState(false)
+    const [score, setScore] = useState(0)
+    //Toggle rules visibility
     function handleToggleRules() {
         setRulesVisible(!rulesVisible)
     }
 
     return (
-        <AppStyled>
-            <Header></Header>
-            <div className="table">
-                <Token type="paper" />
-                <Token type="scissors" />
-                <Token type="rock" />
-            </div>
-            <Button text="Rules" handleClick={handleToggleRules} />
-            <Rules handleClick={handleToggleRules} visible={rulesVisible} />
-        </AppStyled>
+        <ScoreContext.Provider value={{ score, setScore }}>
+            <AppStyled>
+                <Header />
+                <Table />
+                <Button text="Rules" handleClick={handleToggleRules} />
+                <Rules handleClick={handleToggleRules} visible={rulesVisible} />
+            </AppStyled>
+        </ScoreContext.Provider>
     )
 }
 

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import rulesImg from '../../images/image-rules.svg'
 import closeIcon from '../../images/icon-close.svg'

@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const ButtonStyled = styled.button`
-    padding: 0.5rem 2rem;
+    padding: 0.7rem 2rem;
+    margin: 1em auto;
 
     background: none;
     border: none;
@@ -15,4 +16,9 @@ export const ButtonStyled = styled.button`
     font-weight: normal;
     color: rgba(255, 255, 255, 0.7);
     letter-spacing: 2px;
+
+    &.white {
+        background-color: #fff;
+        color: var(--scoreText);
+    }
 `
