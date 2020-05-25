@@ -22,5 +22,6 @@ export const HeaderStyled = styled.header`
         line-height: 18px;
         letter-spacing: 1px;
         text-transform: uppercase;
+        text-shadow: -3px 2px 5px rgba(0, 0, 0, 0.75);
     }
 `

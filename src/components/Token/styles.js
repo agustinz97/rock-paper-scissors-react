@@ -1,10 +1,14 @@
 import styled, { keyframes } from 'styled-components'
 
-const click = keyframes`
-    to {
-        box-shadow: 0 0 0 25px rgba(255,255,255,.04), 0 0 0 50px rgba(255,255,255,.04), 0 0 0 75px rgba(255,255,255,.02);
-        transform: rotateZ(360deg) scale(1.1);
-    }
+const shadow = keyframes`
+  to {
+    box-shadow: 0 0 0 40px rgba(255,255,255,.04), 0 0 0 80px rgba(255,255,255,.04), 0 0 0 120px rgba(255,255,255,.02);
+  }
+`
+const box = keyframes`
+  to {
+    transform: rotateY(360deg);
+  }
 `
 
 const pulse = keyframes`
@@ -37,11 +41,12 @@ export const TokenStyled = styled.div`
 
     position: relative;
 
-    animation: ${({ winner }) => (winner ? click : '')} 1s;
+    animation: ${({ winner }) => (winner ? shadow : '')} 1s;
     animation-fill-mode: forwards;
 
-    &.big {
-        border-width: 30px;
+    img {
+        width: 40%;
+        animation: ${({ winner }) => (winner ? box : '')} 1s;
     }
 
     @media (min-width: 1366px) {

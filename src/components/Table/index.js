@@ -84,16 +84,17 @@ export const Table = function () {
     }
 
     return (
-        <TableStyled bg={tableBg} selected={pick} isPlaying={isPlaying}>
+        <TableStyled
+            bg={tableBg}
+            selected={pick}
+            isPlaying={isPlaying}
+            result={result}
+        >
             {!isPlaying ? (
                 <>
                     <Token type="paper" handleClick={handleSelection} />
                     <Token type="scissors" handleClick={handleSelection} />
-                    <Token
-                        type="rock"
-                        handleClick={handleSelection}
-                        className="big"
-                    />
+                    <Token type="rock" handleClick={handleSelection} />
                 </>
             ) : (
                 <>
