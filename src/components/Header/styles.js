@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 
 export const HeaderStyled = styled.header`
+    width: 100%;
+    max-width: var(--desktop);
     padding: 0.5rem 1rem;
+    margin: 0 auto;
+
     border: 3px solid var(--headerOutline);
     border-radius: 10px;
 

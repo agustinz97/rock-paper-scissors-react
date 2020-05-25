@@ -1,16 +1,41 @@
 import styled from 'styled-components'
 
 export const TableStyled = styled.section`
-    margin-top: 4rem;
+    width: 100%;
+    max-width: var(--desktop);
+    padding: 1rem;
 
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+
+    > div {
+        width: 130px;
+        height: 130px;
+        margin: 0.5rem 1rem;
+    }
 
     background-image: url(${({ selected, bg }) => (selected ? '' : bg)});
     background-position: center;
     background-repeat: no-repeat;
     background-size: 70%;
+
+    h4 {
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .playing {
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 230px;
+        grid-template-rows: 230px;
+    }
 
     .playAgain {
         width: 100%;
@@ -36,6 +61,17 @@ export const TableStyled = styled.section`
 
         button {
             width: 70%;
+        }
+    }
+
+    @media (min-width: 1366px) {
+        max-width: 500px;
+        background-size: 60%;
+        > div:not(.playAgain) {
+            /* width: 230px;
+            height: 230px; */
+            background-color: red;
+            margin: 1.5rem 2.5rem;
         }
     }
 `

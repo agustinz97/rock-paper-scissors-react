@@ -43,7 +43,6 @@ export const Token = function (props) {
                 onClick={() => handleClick(this)}
             >
                 <img src={TYPES[props.type]?.icon} alt="" />
-                {props.text && <p>{props.text}</p>}
             </TokenStyled>
         </>
     )

@@ -84,25 +84,34 @@ export const Table = function () {
     }
 
     return (
-        <TableStyled bg={tableBg} selected={pick}>
+        <TableStyled bg={tableBg} selected={pick} isPlaying={isPlaying}>
             {!isPlaying ? (
                 <>
                     <Token type="paper" handleClick={handleSelection} />
                     <Token type="scissors" handleClick={handleSelection} />
-                    <Token type="rock" handleClick={handleSelection} />
+                    <Token
+                        type="rock"
+                        handleClick={handleSelection}
+                        className="big"
+                    />
                 </>
             ) : (
                 <>
-                    <Token
-                        type={pick}
-                        text="You picked"
-                        winner={result === 'win'}
-                    />
-                    <Token
-                        type={housePick || null}
-                        text="the house picked"
-                        winner={result === 'lose'}
-                    />
+                    <div>
+                        <Token
+                            type={pick}
+                            winner={result === 'win'}
+                            className="big"
+                        />
+                        <h4>You picked</h4>
+                    </div>
+                    <div>
+                        <Token
+                            type={housePick || null}
+                            winner={result === 'lose'}
+                        />
+                        <h4>The house picked</h4>
+                    </div>
 
                     {result && (
                         <div className="playAgain">

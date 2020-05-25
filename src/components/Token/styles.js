@@ -20,9 +20,9 @@ const pulse = keyframes`
 `
 
 export const TokenStyled = styled.div`
-    width: 130px;
-    height: 130px;
-    margin: 1rem auto;
+    width: 100%;
+    height: 100%;
+    margin: auto;
 
     background-color: ${props => (props.type ? '#f2f2f2' : 'var(--darkBlue)')};
     border-radius: 50%;
@@ -40,19 +40,13 @@ export const TokenStyled = styled.div`
     animation: ${({ winner }) => (winner ? click : '')} 1s;
     animation-fill-mode: forwards;
 
-    p{
-        font-size: 16px;
-        color: #fff;
-        text-transform: uppercase;
-        position: absolute;
-        bottom: -50%;
-        left: 50%;
-        transform: translateX(-50%);
-        text-align: center;
-        white-space: nowrap;
+    &.big {
+        border-width: 30px;
     }
 
-    /* &:hover {
-        animation: ${pulse} 1s infinite;
-    } */
+    @media (min-width: 1366px) {
+        &:hover {
+            animation: ${pulse} 1s infinite;
+        }
+    }
 `

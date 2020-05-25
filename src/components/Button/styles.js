@@ -21,4 +21,8 @@ export const ButtonStyled = styled.button`
         background-color: #fff;
         color: var(--scoreText);
     }
+
+    @media (min-width: 1366px) {
+        cursor: pointer;
+    }
 `

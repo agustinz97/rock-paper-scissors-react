@@ -10,7 +10,12 @@ export const Rules = function (props) {
         <RulesStyled visible={props.visible}>
             <h2>Rules</h2>
             <img src={rulesImg} alt="" />
-            <img src={closeIcon} alt="" onClick={props.handleClick} />
+            <img
+                src={closeIcon}
+                alt=""
+                onClick={props.handleClick}
+                className="closeIcon"
+            />
         </RulesStyled>
     )
 }

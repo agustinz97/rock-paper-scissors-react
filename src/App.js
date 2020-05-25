@@ -9,12 +9,13 @@ import { Rules } from './components/Rules'
 import { Table } from './components/Table'
 
 const AppStyled = styled.main`
-    min-height: 100vh;
+    height: 100vh;
     padding: 1.5rem;
 
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
+    align-items: center;
 
     background-image: radial-gradient(
         circle at top,
@@ -22,8 +23,10 @@ const AppStyled = styled.main`
         var(--darkBlue) 100%
     );
 
-    button {
-        margin-top: auto;
+    @media (min-width: 1366px) {
+        > button {
+            margin-right: 1rem;
+        }
     }
 `
 export const ScoreContext = createContext()
