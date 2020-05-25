@@ -23,7 +23,7 @@ export const TableStyled = styled.section`
     h4 {
         margin-top: 1rem;
 
-        font-size: 16px;
+        font-size: 14px;
         color: #fff;
         text-transform: uppercase;
         text-align: center;
